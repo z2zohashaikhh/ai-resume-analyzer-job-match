@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CareerLens AI - Transforming Resumes into Opportunities</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img class="logo" src="\Frontend\CareerLensAI.png" alt="logo">
+    </div>
+    <div class="line1">
+        <h1>Gain Clarity. Build Skills. Land Jobs.</h1>
+    </div>
+    <div class="line2">
+        <h3>Upload your resume for instant ATS analysis and optimization tips.</h3>
+    </div><br><br>
+
+    <div class="container">
+        <div id="resumeForm">
+            <div>
+                <label for="companyName">Company Name</label><br>
+                <input type="text" name="cname" id="companyName" class="cname" required><br><br>
+            </div>
+            <div>
+                <label for="jobTitle">Job Title</label><br>
+                <input type="text" name="job-title" id="jobTitle" class="job-title" required><br><br>
+            </div>
+            <div>
+                <label for="experienceLevel">Years of Experience</label>
+                <select name="experience" id="experience" required>
+                    <option value="">Select Experience</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="0-1">0-1 Years</option>
+                    <option value="1-3">1-3 Years</option>
+                    <option value="3-5">3-5 Years</option>
+                    <option value="5+">5+ Years</option>
+                </select><br><br>
+            </div>
+            <div>
+                <label for="jobDescription">Job Description</label><br>
+                <textarea name="jobDescription" id="jobDescription" class="jobDescription" rows="3" placeholder="Paste the job description here to get personalized ATS analysis, skill-gap detection, and resume improvement suggestions." required></textarea><br><br>
+            </div>
+            <div class="upload-container">
+                <label for="resume">Upload Resume (PDF)</label><br>
+                <input type="file" id="resume" class="resume" name="resume" accept=".pdf,application/pdf" required>
+            </div>
+            <div>
+                <button type="button" id="analyzeBtn" class="analyze-btn">Analyze Resume & Get ATS Score</button>
+            </div><br>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="spinner-container">
+            <div class="premium-spinner"></div>
+            <h2 class="loading-title">CareerLens AI is Analyzing Your Resume...</h2>
+            <p class="loading-subtitle">Extracting deep insights, computing ATS score, and generating strategic feedback engine details.</p>
+            <div class="loading-timer-tip">This may take up to 60-90 seconds. Please do not close or refresh this window.</div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

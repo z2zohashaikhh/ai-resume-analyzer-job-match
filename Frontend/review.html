@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerLens AI - Resume Analysis</title>
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>CareerLens AI Analysis</h1>
+    </div>
+    <br><hr><br>
+    <div class="dashboard-container">
+        <div class="resume-panel">
+            <div class="panel-header">
+                <h2>Resume Preview</h2>
+            </div>
+            <iframe src="" id="resumeViewer" class="resume-viewer" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+        <div class="analysis-panel">
+            <div class="card ats-card">
+                <div class="score-section">
+                    <div class="progress-circle">
+                        <svg width="160" height="160">
+                            <circle cx="80" cy="80" r="70" class="bg-circle"></circle>
+                            <circle cx="80" cy="80" r="70" class="progress-circle-path"></circle>
+                        </svg>
+                        <div class="score-text">
+                            <h1 id="atsScore">0</h1>
+                            <span>/100</span>
+                        </div>
+                    </div>
+                    <div class="score-details">
+                        <h1>ATS Score</h1>
+                        <!-- <p id="atsMessage">Your resume is ATS friendly and matches most requirements from the job description.</p> -->
+                         <p id="atsMessage"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-user-check"></i>
+                    Hiring Recommendation
+                </div>
+
+                <div class="list match-score">
+                    <div id="recommendationContainer"></div>
+                    <!-- <div class="strong-status" id="strongMatch">
+                        <i class="fa-solid fa-circle strong"></i>
+                        Strong Match
+                    </div>
+                    <div class="moderate-status" id="moderateMatch">
+                        <i class="fa-solid fa-circle moderate"></i>
+                    </div>
+                    <div class="low-status" id="lowMatch">
+                        <i class="fa-solid fa-circle low"></i>
+                        Low Match
+                    </div> -->
+                    <p id="recommendationReason"></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-bullseye"></i>
+                    Job Match Score
+                </div>
+                
+                <div class="percentage" id="jobMatchPercentage">
+                    0%
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-award"></i>
+                    Matched Skills
+                </div>
+                <div class="chip-container" id="matchedSkills">
+                    <!-- <span class="chip danger">JavaScript</span>
+                    <span class="chip danger">Java</span>
+                    <span class="chip danger">System Design</span> -->
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Missing Skills
+                </div>
+
+                <div class="chip-container" id="missingSkills">
+                    <!-- <span class="chip success">Docker</span>
+                    <span class="chip success">AWS</span>
+                    <span class="chip success">Kubernetes</span>
+                    <span class="chip success">CI/CD</span> -->
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Strengths
+                </div>
+
+                <ul class="list success-list" id="strengths">
+                    <!-- <li>Strong Java fundamentals</li>
+                    <li>Good project portfolio</li>
+                    <li>Clean resume formatting</li>
+                    <li>Relevant technical skills</li> -->
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    Areas for Improvement
+                </div>
+
+                <ul class="list danger-list" id="weaknesses">
+                    <!-- <li>Missing cloud technologies</li>
+                    <li>No quantified achievements</li>
+                    <li>Limited keyword coverage</li> -->
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Suggestions
+                </div>
+
+                <ol class="suggestion-list" id="suggestions">
+                    <!-- <li>Add AWS projects.</li>
+                    <li>Use Stronger action verbs.</li>
+                    <li>Include measurable impact.</li>
+                    <li>Add GitHub profile links.</li>
+                    <li>Improve  project descriptions.</li> -->
+                </ol>
+            </div>
+
+            <div class="download-section">
+                <button id="downloadBtn" class="download-btn">
+                    <i class="fa-solid fa-download"></i>
+                    Download Analysis Report
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="review.js"></script>
+</body>
+</html>

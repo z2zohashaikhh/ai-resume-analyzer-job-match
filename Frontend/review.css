@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background: radial-gradient(circle at 80% 20%, rgba(255, 87, 34, 0.45) 0%, rgba(255, 87, 34, 0.20) 20%, transparent 45%), linear-gradient(135deg, #020817, #0F172A, #1E293B);
+    color: #F5F5F5;
+    padding: 30px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 25px;
+}
+
+.resume-panel {
+    background-color: #FFFFFF0a;
+    border: 10px solid #FF572226;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    height: 102vh;
+    padding: 10px;
+}
+
+.panel-header h2 {
+    color: #FF5722;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.resume-viewer {
+    margin-top: 5px;
+    width: 100%;
+    height: calc(100vh - 75px);
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.analysis-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF0a;
+    border: 5px solid #FF572226;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #FF5722;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF5722;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.strong {
+    color: #15E661;
+    margin-right: 10px;
+}
+
+.moderate {
+    color: #EDF84A; 
+    margin-right: 10px;
+}
+
+.low {
+    color: #FF3A17;
+    margin-right: 10px;
+}
+
+.strong-status i, .moderate-status i, .low-status i {
+    margin-bottom: 5px;
+}
+
+.strong-status, .moderate-status, .low-status {
+    font-size: 20px;
+}
+
+.match-score p {
+    margin-left: 40px;
+}
+
+.ats-score {
+    padding: 30px;
+}
+
+.score-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.score-details p{
+    font-size: 20px;
+}
+
+.progress-circle {
+    position: relative;
+}
+
+.progress-circle svg {
+    transform: rotate(-90deg);
+}
+
+.bg-circle {
+    fill: none;
+    stroke: #334155;
+    stroke-width: 12;
+}
+
+.progress-circle-path {
+    fill: none;
+    stroke: #FF5722;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 79;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.score-text h1 {
+    font-size: 38px;
+    color: #FF5722;
+}
+
+.score-text span {
+    color: #CBD5E1;
+}
+
+.score-details h2 {
+    margin-bottom: 10px;
+}
+
+.score-details p {
+    color: #CBD5E1;
+    line-height: 1.6;
+}
+
+.percentage {
+    font-size: 40px;
+    color: #FF5722;
+    font-weight: 900;
+}
+
+.chip-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 18px;
+}
+
+.success {
+    background-color: #EF444426;
+    color: #15E661;
+}
+
+.danger {
+    background-color: #EF444426;
+    color: #F80A0A;
+}
+
+.list {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 10px;
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.success-list li::marker {
+    color: #15E661;
+    font-size: 22px;
+}
+
+.danger-list li::marker {
+    color: #FD1515;
+    font-size: 22px;
+}
+
+.suggestion-list {
+    padding-left: 20px;
+}
+
+.suggestion-list li {
+    margin-bottom: 10px;
+    color: #E5E7EB;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.download-section {
+    margin-top: 10px;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF5722;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #E64A19;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px #FF572259;
+}
+
+@media(max-width:1100px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-panel {
+        height: 70vh;
+    }
+
+    .resume-viewer {
+        height: calc(70vh - 75px);
+    }
+
+    .score-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
