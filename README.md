@@ -73,7 +73,15 @@ The application extracts text from PDF resumes, analyzes it against the provided
 
 ```text
 AI-Resume-Analyzer-Job-Match
-│
+|── assets
+│   ├── screenshots
+│   |   ├── home.png
+|   |   ├── analysis.png
+|   |   ├── result1.png
+|   |   ├── result2.png
+│   ├── sample-files
+│       ├── CareerLens_Analysis_Report_.pdf
+│   
 ├── Backend
 │   ├── server.js
 │   ├── skills.js
@@ -148,8 +156,18 @@ The project will be deployed after the planned AI and ATS improvements are compl
 
 ## 📸 Screenshots
 
-> Screenshots will be added soon.
+### 🏠 Home Page
+![Home Page](assets/screenshots/home.png)
 
+### 📊 Resume Analysis
+![Resume Analysis](assets/screenshots/analysis.png)
+
+### 📊 Resume Analysis Result
+![Resume Analysis Result1](assets/screenshots/result1.png)
+![Resume Analysis Result2](assets/screenshots/result2.png)
+
+## 📄 Sample Files
+- [Generated Report](assets/sample-files/CareerLens_Analysis_Report_.pdf)
 ---
 
 ## 🔮 Planned Improvements
