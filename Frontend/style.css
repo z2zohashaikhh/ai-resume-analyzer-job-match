@@ -5,23 +5,14 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-html,
-body {
+html, body {
     min-height: 100vh;
 }
 
 body {
-    background:
-        radial-gradient(circle at 80% 20%,
-            rgba(255, 87, 34, 0.45) 0%,
-            rgba(255, 87, 34, 0.18) 22%,
-            transparent 45%),
-        linear-gradient(135deg, #020817, #0F172A, #1E293B);
-
+    background: radial-gradient(circle at 80% 20%, #FF572273 0%, #FF57222e 22%, transparent 45%),linear-gradient(135deg, #020817, #0F172A, #1E293B);
     padding: 20px;
 }
-
-/* ---------- Hero Section ---------- */
 
 .logo-container {
     display: flex;
@@ -36,8 +27,7 @@ body {
     margin-top: -40px;
 }
 
-.line1,
-.line2 {
+.line1, .line2 {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -56,8 +46,6 @@ body {
     margin-top: 12px;
 }
 
-/* ---------- Form ---------- */
-
 .container {
     width: 90%;
     max-width: 900px;
@@ -69,10 +57,7 @@ label {
     font-size: 22px;
 }
 
-.cname,
-.job-title,
-select,
-.jobDescription {
+.cname, .job-title, select, .jobDescription {
     width: 100%;
     padding: 14px 18px;
     background: #1E293B;
@@ -88,13 +73,9 @@ select,
     font-size: 18px;
 }
 
-.cname:focus,
-.job-title:focus,
-select:focus,
-.jobDescription:focus,
-.resume:focus {
+.cname:focus, .job-title:focus, select:focus, .jobDescription:focus, .resume:focus {
     border-color: #FF5722;
-    box-shadow: 0 0 8px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 0 8px #FF572266;
 }
 
 .upload-container {
@@ -143,14 +124,12 @@ input[type="file"]::file-selector-button:hover {
 .analyze-btn:hover {
     background: #E64A19;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
+    box-shadow: 0 8px 20px #FF57224D;
 }
 
 .analyze-btn:active {
     transform: translateY(0);
 }
-
-/* ---------- Loading Overlay ---------- */
 
 .loading-overlay {
     position: fixed;
@@ -177,7 +156,7 @@ input[type="file"]::file-selector-button:hover {
     border-top: 6px solid #FF5722;
     border-radius: 50%;
     animation: spinPremium 1.2s linear infinite;
-    box-shadow: 0 0 20px rgba(255, 87, 34, 0.25);
+    box-shadow: 0 0 20px #FF572240;
 }
 
 @keyframes spinPremium {
@@ -207,12 +186,10 @@ input[type="file"]::file-selector-button:hover {
     color: #94A3B8;
     font-size: 13px;
     font-style: italic;
-    border-top: 1px solid rgba(255, 87, 34, 0.15);
+    border-top: 1px solid #FF572226;
     padding-top: 15px;
     display: inline-block;
 }
-
-/* ---------- Responsive ---------- */
 
 @media (max-width: 992px) {
 
@@ -261,12 +238,7 @@ input[type="file"]::file-selector-button:hover {
         font-size: 20px;
     }
 
-    .cname,
-    .job-title,
-    select,
-    .jobDescription,
-    input[type="file"],
-    .analyze-btn {
+    .cname, .job-title, select, .jobDescription, input[type="file"], .analyze-btn {
         font-size: 16px;
     }
 
@@ -294,11 +266,7 @@ input[type="file"]::file-selector-button:hover {
         font-size: 18px;
     }
 
-    .cname,
-    .job-title,
-    select,
-    .jobDescription,
-    input[type="file"] {
+    .cname, .job-title, select, .jobDescription, input[type="file"] {
         font-size: 15px;
     }
 
