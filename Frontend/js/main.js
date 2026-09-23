@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://careerlens-ai-backend-8vz6.onrender.com";
 document.addEventListener("DOMContentLoaded", () => {
     const analyzeBtn = document.getElementById("analyzeBtn");
     const loadingOverlay = document.getElementById("loadingOverlay");
