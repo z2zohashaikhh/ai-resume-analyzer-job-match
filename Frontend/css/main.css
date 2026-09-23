@@ -10,10 +10,11 @@ html, body {
 }
 
 body {
-    background: radial-gradient(circle at 80% 20%, #FF572273 0%, #FF57222e 22%, transparent 45%),linear-gradient(135deg, #020817, #0F172A, #1E293B);
+    background: radial-gradient(circle at 80% 20%, #FF572273 0%, #FF57222e 22%, transparent 45%), linear-gradient(135deg, #020817, #0F172A, #1E293B);
     padding: 20px;
 }
 
+/* Logo */
 .logo-container {
     display: flex;
     justify-content: center;
@@ -53,8 +54,10 @@ body {
 }
 
 label {
+    display: block;
     color: #DDE1E6;
     font-size: 22px;
+    margin-bottom: 8px;
 }
 
 .cname, .job-title, select, .jobDescription {
@@ -66,6 +69,19 @@ label {
     border-radius: 10px;
     font-size: 18px;
     outline: none;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cname, .job-title, select {
+    height: 52px;
+}
+
+.jobDescription {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.5;
 }
 
 .jobDescription::placeholder {
@@ -78,8 +94,12 @@ label {
     box-shadow: 0 0 8px #FF572266;
 }
 
+.form-group {
+    margin-bottom: 22px;
+}
+
 .upload-container {
-    margin: 15px 0;
+    margin: 15px 0 22px;
 }
 
 input[type="file"] {
@@ -101,6 +121,7 @@ input[type="file"]::file-selector-button {
     border-radius: 6px;
     cursor: pointer;
     margin-right: 10px;
+    transition: background 0.3s ease;
 }
 
 input[type="file"]::file-selector-button:hover {
@@ -118,7 +139,7 @@ input[type="file"]::file-selector-button:hover {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .analyze-btn:hover {
@@ -145,6 +166,7 @@ input[type="file"]::file-selector-button:hover {
 
 .spinner-container {
     text-align: center;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -163,7 +185,6 @@ input[type="file"]::file-selector-button:hover {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -192,6 +213,9 @@ input[type="file"]::file-selector-button:hover {
 }
 
 @media (max-width: 992px) {
+    body {
+        padding: 18px;
+    }
 
     .logo {
         width: 560px;
@@ -208,18 +232,32 @@ input[type="file"]::file-selector-button:hover {
     }
 
     .container {
-        width: 95%;
+        width: 92%;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    label {
+        font-size: 21px;
+    }
+
+    .cname, .job-title, select, .jobDescription, input[type="file"] {
+        font-size: 17px;
+    }
+
+    .jobDescription {
+        min-height: 170px;
     }
 }
 
 @media (max-width: 768px) {
-
     body {
         padding: 15px;
     }
 
     .logo {
         width: 430px;
+        max-width: 85%;
         margin-top: 0;
     }
 
@@ -234,47 +272,163 @@ input[type="file"]::file-selector-button:hover {
         padding: 0 10px;
     }
 
+    .container {
+        width: 95%;
+        margin: 35px auto;
+    }
+
     label {
         font-size: 20px;
     }
 
-    .cname, .job-title, select, .jobDescription, input[type="file"], .analyze-btn {
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .cname,.job-title, select {
+        height: 48px;
+    }
+
+    .cname,.job-title, select, .jobDescription, input[type="file"], .analyze-btn {
         font-size: 16px;
+    }
+
+    .jobDescription {
+        min-height: 150px;
     }
 
     .jobDescription::placeholder {
         font-size: 16px;
     }
+
+    .analyze-btn {
+        padding: 14px;
+    }
+
+    .loading-title {
+        font-size: 25px;
+    }
+
+    .loading-subtitle {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
 
     .logo {
         width: 300px;
+        max-width: 90%;
+        margin-top: 0;
     }
 
     .line1 h1 {
         font-size: 26px;
         margin-top: -20px;
+        padding: 0 5px;
     }
 
     .line2 {
         font-size: 15px;
+        padding: 0 5px;
+        line-height: 1.4;
+    }
+
+    .container {
+        width: 100%;
+        margin: 30px auto;
     }
 
     label {
         font-size: 18px;
     }
 
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .cname, .job-title, select {
+        height: 46px;
+        padding: 12px 14px;
+    }
+
     .cname, .job-title, select, .jobDescription, input[type="file"] {
         font-size: 15px;
+    }
+
+    .jobDescription {
+        min-height: 140px;
+        padding: 12px 14px;
     }
 
     .jobDescription::placeholder {
         font-size: 15px;
     }
 
+    input[type="file"] {
+        padding: 10px;
+    }
+
+    input[type="file"]::file-selector-button {
+        padding: 7px 10px;
+        margin-right: 6px;
+        font-size: 14px;
+    }
+
     .analyze-btn {
         font-size: 16px;
+        padding: 13px;
+        margin-top: 15px;
+    }
+
+    .premium-spinner {
+        width: 60px;
+        height: 60px;
+        border-width: 5px;
+    }
+
+    .loading-title {
+        font-size: 22px;
+    }
+
+    .loading-subtitle {
+        font-size: 14px;
+    }
+
+    .loading-timer-tip {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 260px;
+    }
+
+    .line1 h1 {
+        font-size: 23px;
+    }
+
+    .line2 {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    .cname, .job-title, select, .jobDescription, input[type="file"] {
+        font-size: 14px;
+    }
+
+    .analyze-btn {
+        font-size: 15px;
     }
 }
