@@ -10,6 +10,16 @@ It also stores uploaded resumes using Cloudinary and allows users to download a 
 
 ---
 
+## 🌐 Live Demo
+
+### Frontend
+**[CareerLens AI — Live Website](https://careerlens-ai-murex.vercel.app/)**
+
+### Backend
+**[CareerLens AI — Live Backend](https://careerlens-ai-backend-8vz6.onrender.com)**
+
+---
+
 ## 🚀 Features
 
 - 📄 Upload resume in PDF format
